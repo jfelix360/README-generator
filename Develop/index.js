@@ -4,6 +4,7 @@ const markdownTemplate = require('./src/markdownTemplate');
 const {generateMarkdown, renderLicenseBadge, renderLicenseLink, renderLicenseSection} = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
+
 const questions = () => {
     return inquirer.prompt([
         // Prompt for project name
