@@ -3,34 +3,34 @@ const { renderLicenseBadge } = require("../utils/generateMarkdown")
 const generateTemplate = userInput => {
     // Use template literals to format Markdown 
     return `
-    ### ${renderLicenseBadge(license)}
+    ### ${renderLicenseBadge(userInput.license)}
     
-    # ${project}
+    # ${userInput.project}
 
     ## Description
-    ### ${description}
+    ### ${userInput.description}
 
     ## Table of Contents
-    ### ${toc}
+    ### ${userInput.toc}
 
     ## Installation
-    ### ${install}
+    ### ${userInput.install}
 
     ## Usage
-    ### ${usage}
+    ### ${userInput.usage}
 
     ## Contributing 
-    ### ${contributions}
+    ### ${userInput.contributions}
 
     ## Tests
-    ### ${tests}
+    ### ${userInput.tests}
 
     ## Questions
-    ### Please contact me with questions concerning ${project} either through
-    ### my github page: ${github} or at ${email}
+    ### Please contact me with questions concerning ${userInput.project} either through
+    ### my github page: ${userInput.github} or at ${userInput.email}
 
     ## License 
-    ### ${renderLicenseSection}
-    ### ${renderLicenseLink}
+    ### ${renderLicenseSection(userInput.license)}
+    ### ${renderLicenseLink(userInput.license)}
     `
 }
