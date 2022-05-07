@@ -6,6 +6,7 @@ const {generateMarkdown, renderLicenseBadge, renderLicenseLink, renderLicenseSec
 // TODO: Create an array of questions for user input
 const questions = () => {
     return inquirer.prompt([
+        // Prompt for project name
         {
             type: 'input',
             name: 'project',
@@ -19,6 +20,7 @@ const questions = () => {
                 }
             }
         },
+        // Prompt for project description
         {
             type: 'input',
             name: 'description',
@@ -32,6 +34,7 @@ const questions = () => {
                 }
             }
         },
+        // Prompt for table of contents as a comma seperated list
         {
             type: 'input',
             name: 'toc',
@@ -45,6 +48,7 @@ const questions = () => {
                 }
             }
         },
+        // Prompt for installation guidelines
         {
             type: 'input',
             name: 'install',
@@ -58,6 +62,7 @@ const questions = () => {
                 }
             }
         },
+        // Prompt for usage guidelines
         {
             type: 'input',
             name: 'usage',
@@ -71,12 +76,20 @@ const questions = () => {
                 }
             }
         },
+        // Prompt for license type
         {
             type: 'input',
             name: 'license',
             message: 'What type of license does this project fall under?  (Required)',
-            choices: ['Public Domain', 'Permissive', 'LGPL', 'Copyleft', 'Proprietary']
+            choices: ['Apache 2.0', 'Boost', 'BSD 3-Clause', 'BSD 2-Clause', 'Creative Commons', 'Eclipse', 
+            'GNU GPL v3', 'GNU GPL v2', 'GNU AGPL v3', 'GNU LGPL v3', 'GNU FDL v1.3', 
+            'The Hippocratic License 2.1', 'The Hippocratic License 3.0', 'IBM Public License Version 1.0',
+            'ISC License', 'MIT License', 'Mozilla Public License 2.0', 'Attribution License', 
+            'Open Database License', 'Public Domain Dedication and License', 'Perl License',
+            'Artistic License 2.0', 'SIL Open Font License 1.1', 'The Unlicense', 
+            'The Do What the Fuck You Want to Public License', 'The Zlib License']
         },
+        // Prompt for contributers to project
         {
             type: 'input',
             name: 'contributions',
@@ -90,6 +103,7 @@ const questions = () => {
                 }
             }
         },
+        // Prompt for tests for project
         {
             type: 'input',
             name: 'tests',
@@ -103,6 +117,7 @@ const questions = () => {
                 }
             }
         },
+        // Prompt for github username
         {
             type: 'input',
             name: 'github',
@@ -116,6 +131,8 @@ const questions = () => {
                 }
             }
         },
+        // Prompt for email
+
         {
             type: 'input',
             name: 'email',
