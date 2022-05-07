@@ -145,7 +145,141 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (license === 'Apache 2.0') {
+    return `
+    (https://opensource.org/licenses/Apache-2.0)  
+    `;
+  }
+  else if (license === 'Boost') {
+    return `
+    (https://www.boost.org/LICENSE_1_0.txt)
+    `;
+  }
+  else if (license === 'BSD 3-Clause') {
+    return `
+    (https://opensource.org/licenses/BSD-3-Clause)
+    `;
+  }
+  else if (license === 'BSD 2-Clause') {
+    return `
+    (https://opensource.org/licenses/BSD-2-Clause)
+    `;
+  }
+  else if (license === 'Creative Commons') {
+    return `
+    (http://creativecommons.org/publicdomain/zero/1.0/)
+    `;
+  }
+  else if (license === 'Eclipse') {
+    return `
+    (https://opensource.org/licenses/EPL-1.0)
+    `;
+  }
+  else if (license === 'GNU GPL v3') {
+    return `
+    (https://www.gnu.org/licenses/gpl-3.0)
+    `;
+  }
+  else if (license === 'GNU GPL v2') {
+    return `
+    (https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+    `;
+  }
+  else if (license === 'GNU AGPL v3') {
+    return `
+    (https://www.gnu.org/licenses/agpl-3.0)
+    `;
+  }
+  else if (license === 'GNU LGPL v3') {
+    return `
+    (https://www.gnu.org/licenses/lgpl-3.0)
+    `;
+  }
+  else if (license === 'GNU FDL v1.3') {
+    return `
+    (https://www.gnu.org/licenses/fdl-1.3)
+    `;
+  }
+  else if (license === 'The Hippocratic License 2.1') {
+    return `
+    (https://firstdonoharm.dev)
+    `;
+  }
+  else if (license === 'The Hippocratic License 3.0') {
+    return `
+    (https://firstdonoharm.dev)
+    `;
+  }
+  else if (license === 'IBM Public License Version 1.0') {
+    return `
+    (https://opensource.org/licenses/IPL-1.0)
+    `;
+  }
+  else if (license === 'ISC License') {
+    return `
+    (https://opensource.org/licenses/ISC)
+    `;
+  }
+  else if (license === 'MIT License') {
+    return `
+    (https://opensource.org/licenses/MIT)
+    `;
+  }
+  else if (license === 'Mozilla Public License 2.0') {
+    return `
+    (https://opensource.org/licenses/MPL-2.0)
+    `;
+  }
+  else if (license === 'Attribution License') {
+    return `
+    (https://opendatacommons.org/licenses/by/)
+    `
+  }
+  else if (license === 'Open Database License') {
+    return `
+    (https://opendatacommons.org/licenses/odbl/)
+    `;
+  }
+  else if (license === 'Public Domain Dedication and License') {
+    return `
+    (https://opendatacommons.org/licenses/pddl/)
+    `;
+  }
+  else if (license === 'Perl License') {
+    return `
+    (https://opensource.org/licenses/Artistic-2.0)
+    `;
+  }
+  else if (license === 'Artistic License 2.0') {
+    return `
+    (https://opensource.org/licenses/Artistic-2.0)
+    `;
+  }
+  else if (license === 'SIL Open Font License 1.1') {
+    return `
+    (https://opensource.org/licenses/OFL-1.1)
+    `;
+  }
+  else if (license === 'The Unlicense') {
+    return `
+    (http://unlicense.org/)
+    `;
+  }
+  else if (license === 'The Do What the Fuck You Want to Public License') {
+    return `
+    (http://www.wtfpl.net/about/)
+    `;
+  }
+  else if (license === 'The Zlib License') {
+    return `
+    (https://opensource.org/licenses/Zlib)
+    `;
+  }
+  else {
+    return '';
+  }
+};
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
