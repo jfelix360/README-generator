@@ -32,5 +32,5 @@ const generateTemplate = userInput => {
     ## License 
     ### ${renderLicenseSection(userInput.license)}
     ### ${renderLicenseLink(userInput.license)}
-    `
+    `;
 }

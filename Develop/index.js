@@ -88,7 +88,7 @@ const questions = () => {
             'ISC License', 'MIT License', 'Mozilla Public License 2.0', 'Attribution License', 
             'Open Database License', 'Public Domain Dedication and License', 'Perl License',
             'Artistic License 2.0', 'SIL Open Font License 1.1', 'The Unlicense', 
-            'The Do What the Fuck You Want to Public License', 'The Zlib License', 'Project is unlicensed']
+            'The Do What the Fuck You Want to Public License', 'The Zlib License', 'This project is unlicensed']
         },
         // Prompt for contributers to project
         {
