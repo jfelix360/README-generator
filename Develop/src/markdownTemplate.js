@@ -1,5 +1,3 @@
-const { renderLicenseBadge } = require("../utils/generateMarkdown")
-
 const generateTemplate = userInput => {
     // Use template literals to format Markdown 
     return `
@@ -36,7 +34,7 @@ const generateTemplate = userInput => {
     my github page: ${userInput.github} or at ${userInput.email}
 
     ## License 
-    ${renderLicenseLink(userInput.license)}
     ${renderLicenseSection(userInput.license)}
+    ${renderLicenseLink(userInput.license)}
     `;
 }

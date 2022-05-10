@@ -1,7 +1,7 @@
 // Load packages
 const inquirer = require('inquirer');
+const {writeFile, renderLicenseBadge, renderLicenseLink, renderLicenseSection} = require('./utils/generateMarkdown');
 const markdownTemplate = require('./src/markdownTemplate');
-const {generateMarkdown, renderLicenseBadge, renderLicenseLink, renderLicenseSection} = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 
@@ -135,11 +135,16 @@ const questions = () => {
     ])
 };
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
+questions()
+.then(questionsData => {
+    return generateTemplate(questionsData);
+})
+.then(pageMD => {
+    return writeFile(pageMD);
+})
+.then(writeFileResponse => {
+    console.log(writeFileResponse);
+})
+.catch(err => {
+    console.log(err);
+})
