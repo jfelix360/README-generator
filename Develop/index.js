@@ -35,20 +35,6 @@ const questions = () => {
                 }
             }
         },
-        // Prompt for table of contents as a comma seperated list
-        {
-            type: 'input',
-            name: 'toc',
-            message: 'Please enter a Table of Contents as a comma seperated list. (Required)',
-            validate: projectInput => {
-                if (projectInput) {
-                    return true;
-                } else {
-                    console.log('**// REQUIRED INPUT //**');
-                    return false;
-                }
-            }
-        },
         // Prompt for installation guidelines
         {
             type: 'input',
@@ -133,7 +119,6 @@ const questions = () => {
             }
         },
         // Prompt for email
-
         {
             type: 'input',
             name: 'email',
