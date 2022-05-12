@@ -1,7 +1,7 @@
 // Load packages
 const inquirer = require('inquirer');
-const {writeFile, renderLicenseBadge, renderLicenseLink, renderLicenseSection} = require('./utils/generateMarkdown');
-const markdownTemplate = require('./src/markdownTemplate');
+const generateTemplate = require('./src/markdownTemplate');
+const {writeFile} = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 
@@ -65,9 +65,9 @@ const questions = () => {
         },
         // Prompt for license type
         {
-            type: 'input',
+            type: 'checkbox',
             name: 'license',
-            message: 'What type of license does this project fall under?  (Required)',
+            message: 'What type of license does this project fall under?',
             choices: ['Apache 2.0', 'Boost', 'BSD 3-Clause', 'BSD 2-Clause', 'Creative Commons', 'Eclipse', 
             'GNU GPL v3', 'GNU GPL v2', 'GNU AGPL v3', 'GNU LGPL v3', 'GNU FDL v1.3', 
             'The Hippocratic License 2.1', 'The Hippocratic License 3.0', 'IBM Public License Version 1.0',
@@ -136,8 +136,8 @@ const questions = () => {
 };
 
 questions()
-.then(questionsData => {
-    return generateTemplate(questionsData);
+.then(questionsInput => {
+    return generateTemplate(questionsInput);
 })
 .then(pageMD => {
     return writeFile(pageMD);
